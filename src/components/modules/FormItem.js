@@ -30,9 +30,9 @@ class FormItem extends Component {
 		switch (this.props.name) {
 		case "name":
 			return <fa.FaUser size={iconSize}/>;
-		case "from-email":
+		case "your-email":
 			return <fa.FaEnvelope size={iconSize}/>;
-		case "to-email":
+		case "friend-email":
 			return <fa.FaEnvelope size={iconSize}/>;
 		case "amount":
 			return <fa.FaDatabase size={iconSize}/>;

@@ -1,11 +1,7 @@
-/* Sizes */
-/* Responsive */
-/* Other */
-/* Colors */
-/* Fonts */
+/* Container Onboarding */
 .container-onboarding {
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: wrap;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -16,6 +12,11 @@
 .container-onboarding a:hover {
     /*color: #0099D0 !important;*/
     text-decoration: underline;
+}
+
+.container-onboarding img {
+    width: 400px;
+    height: 144px;
 }
 
 .container-onboarding input {
@@ -75,6 +76,8 @@
 .container-onboarding .txt2 {
     color: #666 !important;
 }
+
+/* Wrap Onboarding */
 
 .container-onboarding .wrap-onboarding {
     display: flex;

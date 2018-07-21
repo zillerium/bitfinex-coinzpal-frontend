@@ -1,5 +1,6 @@
 /* eslint-disable no-mixed-spaces-and-tabs,indent */
 import React  from 'react'
+import { Footer } from 'components';
 import { ActionButton, FormItem } from 'components/modules'
 import update from 'immutability-helper'
 
@@ -59,6 +60,7 @@ class Springboard extends React.Component {
 
 		return (
 			<div className={"signup container-onboarding"}>
+				{/*<img src={require("assets/Logo-Green-Inside.png")} alt={"Logo"}/>*/}
 				<div className={"wrap-onboarding"}>
 					<form className={"wrap-form validate-form"} onSubmit={this.onSubmit}>
 						<h1 className={"wrap-form-title"}>
@@ -66,38 +68,38 @@ class Springboard extends React.Component {
 						</h1>
 						<FormItem
 							key={1}
-						  	type={"text"}
-						  	name={"name"}
-						  	placeholder={"Name"}
-						  	autocomplete={"name"}
-					  		validate={"name"}
+							type={"text"}
+							name={"name"}
+							placeholder={"Name"}
+							autocomplete={"name"}
+							validate={"name"}
 							required={true}
 							onChange={this.onChange}
 						/>
 						<FormItem
 							key={2}
-						  	type={"email"}
-						  	name={"from-email"}
-						  	placeholder={"From Email"}
-						  	autocomplete={"email"}
-						  	validate={"email"}
+							type={"email"}
+							name={"your-email"}
+							placeholder={"Your Email"}
+							autocomplete={"email"}
+							validate={"email"}
 							required={true}
-						  	onChange={this.onChange}
+							onChange={this.onChange}
 						/>
 						<FormItem
 							key={3}
-						  	type={"email"}
-						  	name={"to-email"}
-					  		placeholder={"To Email"}
-						  	autocomplete={""}
-						  	validate={"email"}
+							type={"email"}
+							name={"friend-email"}
+							placeholder={"Friend's Email"}
+							autocomplete={""}
+							validate={"email"}
 							required={true}
-						  	onChange={this.onChange}
+							onChange={this.onChange}
 						/>
 						<FormItem
 							key={4}
 							type={"text"}
-							name={"amoubt"}
+							name={"amount"}
 							placeholder={"Amount"}
 							autocomplete={""}
 							validate={"text"}
@@ -106,15 +108,15 @@ class Springboard extends React.Component {
 						/>
 						<label className={"form-check-container form-item txt2"}>
 							<input name={"user-agreement"}
-								   type={"checkbox"}
-								   ref={(input) => {this.checkbox = input}}
+							       type={"checkbox"}
+							       ref={(input) => {this.checkbox = input}}
 							/>
 							{"I agree to pay the 0.1% fee (up to a maximum of $1) for the CoinzPal service"}
 						</label>
 						<ActionButton
 							text={"Sign & Submit"}
 							loading={this.state.networking}
-					  	/>
+						/>
 					</form>
 				</div>
 			</div>
