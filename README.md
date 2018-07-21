@@ -1,4 +1,4 @@
-## The frontend for the CryptoPal app Bitfinex hackathon 20-22 July @ London
+## The frontend for the CoinzPal app Bitfinex hackathon 20-22 July @ London
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
