@@ -1,27 +1,16 @@
 {
   "name": "cryptopal",
   "version": "0.1.0",
-  "description": "A simple app which lets you send EOS and EOS tokens to an email address",
-  "main": "index.js",
+  "private": true,
+  "dependencies": {
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-scripts": "1.1.4"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/PaulRBerg/bitfinex-cryptopal-frontend.git"
-  },
-  "keywords": [
-    "tokens",
-    "email",
-    "peer",
-    "to",
-    "peer",
-    "bitfinex"
-  ],
-  "author": "Paul Berg <hello@paulrberg.com> (https://paulrberg.com)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/PaulRBerg/bitfinex-cryptopal-frontend/issues"
-  },
-  "homepage": "https://github.com/PaulRBerg/bitfinex-cryptopal-frontend#readme"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
 }
