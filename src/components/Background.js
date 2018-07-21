@@ -1,7 +1,5 @@
 import React from 'react';
 
-import 'styles/1-layouts/background.css';
-
 class Background extends React.Component {
 
 	render() {

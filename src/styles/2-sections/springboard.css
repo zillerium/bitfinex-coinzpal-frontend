@@ -1,216 +1,205 @@
-.springboard {
+/* Sizes */
+/* Responsive */
+/* Other */
+/* Colors */
+/* Fonts */
+.container-onboarding {
     display: flex;
-    flex-flow: column nowrap;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    /*background: #0099D0;*/
 }
 
-/* Header */
-.springboard header {
+.container-onboarding a:hover {
+    /*color: #0099D0 !important;*/
+    text-decoration: underline;
+}
+
+.container-onboarding input {
+    outline: none;
+    border: none;
+}
+
+.container-onboarding input:focus::placeholder {
+    color: transparent;
+}
+
+.container-onboarding input::placeholder {
+    color: #999;
+}
+
+.container-onboarding textarea {
+    outline: none;
+    border: none;
+}
+
+.container-onboarding textarea:focus::placeholder {
+    color: transparent;
+}
+
+.container-onboarding textarea::placeholder {
+    color: #999;
+}
+
+.container-onboarding textarea:focus, .container-onboarding input:focus {
+    border-color: transparent !important;
+}
+
+.container-onboarding button {
+    outline: none !important;
+    border: none;
+    background: transparent;
+}
+
+.container-onboarding button:hover {
+    cursor: pointer;
+}
+
+.container-onboarding iframe {
+    border: none !important;
+}
+
+.container-onboarding .txt1, .container-onboarding .txt2 {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.45;
+}
+
+.container-onboarding .txt1 {
+    color: #999 !important;
+}
+
+.container-onboarding .txt2 {
+    color: #666 !important;
+}
+
+.container-onboarding .wrap-onboarding {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-    margin: 12px 0 12px 24px;
-    height: 64px;
+    width: auto;
+    background: white;
+    border-radius: .5rem;
+    overflow: visible;
+    height: auto;
+    padding: 2rem 4rem;
 }
 
-.springboard header .spacer {
-    flex-grow: 1;
+.container-onboarding .wrap-onboarding .wrap-form {
+    width: 350px;
 }
 
-.springboard header ul {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.springboard header ul li {
-    margin: 0 16px;
-}
-
-.springboard header .menu-list li {
-    margin: 0 24px;
-}
-
-.springboard header ul li a {
-    font-size: 16px;
-    font-weight: 500;
-    transition: all 0.4s;
-}
-
-.springboard header ul li a:hover {
-    color: #002AA1;
-}
-
-.springboard header ul li img {
-    width: 28px;
-    height: 28px;
-}
-
-
-/* Front Container */
-.springboard .front-container {
-    display: flex;
-    flex-flow: column nowrap;
-    flex-grow: 1;
-    justify-content: space-around;
-    margin: 0 8%;
-}
-
-.springboard .front-container .text-container {
-    display: flex;
-    flex-flow: column nowrap;
-    height: 100%;
-}
-
-.springboard .front-container .text-container h1 {
-    margin: 28px 0 14px;
-    font-size: 52px;
-    font-weight: 800;
-    letter-spacing: 1px;
-}
-
-.springboard .front-container .text-container h2 {
-    margin: 5px 0 0 5px;
+.container-onboarding .wrap-onboarding .wrap-form .wrap-form-title {
+    display: block;
+    width: 100%;
+    margin-bottom: 3rem;
+    color: #171719;
     font-size: 24px;
-    line-height: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
 }
 
-
-/* Items Container */
-.springboard .front-container .items-container {
-    display: flex;
-    flex-flow: column nowrap;
-    margin-bottom: 8px;
+.container-onboarding .wrap-onboarding .wrap-form .form-check-container {
+    display: block;
+    margin-bottom: 0.75rem;
+    padding-left: 1.25rem;
+    cursor: pointer;
 }
 
-.springboard .front-container .items-container img {
-    width: 20px;
-    height: 20px;
+.container-onboarding .wrap-onboarding .wrap-form .form-check-container input[type=checkbox] {
+    margin-top: 5px;
+    margin-right: .5rem;
+    margin-left: -1.25rem;
+    width: auto;
 }
 
-.springboard .front-container .items-container span {
-    padding: 0;
+.container-onboarding .wrap-onboarding .wrap-form .form-check-container:hover {
+    opacity: 1;
+    text-decoration: none !important;
 }
 
-.springboard .front-container .items-container a {
+.container-onboarding .wrap-onboarding .wrap-form .form-check-container .legal {
+    text-decoration: underline;
+}
+
+.container-onboarding .wrap-onboarding .wrap-form .text-center p:first-child {
     margin: 0;
-    padding: 0;
-    text-align: center;
 }
 
-.springboard .front-container .items-container div {
+.container-onboarding .wrap-onboarding .wrap-form .g-recaptcha-container {
     display: flex;
     flex-flow: row nowrap;
-    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 5px;
 }
 
-
-/* Community & Whitepaper */
-.springboard .front-container .items-container div .highlight {
+.container-onboarding .wrap-onboarding .wrap-form .wrap-form-btn-container {
     display: flex;
     flex-flow: row nowrap;
+    justify-content: center;
+    margin-bottom: 0.75rem;
+    width: 100%;
+}
+
+.container-onboarding .wrap-onboarding .wrap-form .wrap-form-btn-container .wrap-form-btn {
+    display: flex;
+    justify-content: center;
     align-items: center;
-    box-sizing: content-box;
-    padding: 0 10px;
-    border-radius: inherit;
-    height: 100%;
-}
-
-.springboard .front-container .items-container div .highlight .spacer {
-    width: 8px;
-}
-
-.springboard .front-container .items-container div .highlight span {
-    width: 80px;
+    padding: 0 25px;
+    border-radius: 5px;
+    width: 100%;
+    height: 50px;
+    background: #3b9866;
     color: white;
-    font-size: 13px;
+    line-height: 1.5;
+    font-size: 15px;
     font-weight: 600;
-    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.25s;
 }
 
-.springboard .front-container .items-container .spacer {
-    height: 12px;
+.container-onboarding .wrap-onboarding .wrap-form .wrap-form-btn-container .wrap-form-btn:hover {
+    opacity: .8;
+    text-decoration: none;
 }
 
-.springboard .front-container .items-container .community {
-    border-radius: 2px;
-    margin-top: 16px;
-    height: 36px;
-    background: #EEEFFB;
+.container-onboarding .wrap-onboarding .wrap-image {
+    margin-left: 6rem;
 }
 
-.springboard .front-container .items-container .community .highlight {
-    background: #212B6D;
-}
-
-.springboard .front-container .items-container .whitepaper {
-    border-radius: 4px;
-    height: 36px;
-    background: #FDEEF3;
-}
-
-.springboard .front-container .items-container .whitepaper .highlight {
-    background: #E55682;
-}
-
-
-/* Social */
-.springboard .social-box-container {
-    display: none;
-}
-
-
-
-/* Mobile */
 @media screen and (max-width: 992px) {
-
-    /* Header */
-    .springboard header .spacer {
-        flex-grow: 0;
-    }
-
-    .springboard header ul {
+    .container-onboarding .wrap-onboarding .wrap-image {
         display: none;
     }
 
-    /* Front Container */
-    .springboard .front-container {
-        justify-content: space-between;
-        align-items: center;
-        margin: 0 16px;
+}
+
+@media screen and (max-width: 768px) {
+    .container-onboarding .wrap-onboarding {
+        padding: 2rem 4rem;
+    }
+    .container-onboarding .alert-onboarding {
+        width: 100%;
     }
 
-    .springboard .front-container .text-container h1 {
-        margin: 14px 0;
-        font-size: 34px;
-        text-align: center;
-    }
+}
 
-    .springboard .front-container .text-container h2 {
-        font-size: 14px;
-        text-align: center;
-        line-height: 22px;
-    }
-
-    .springboard .front-container .items-container .community .col-lg-8,
-    .springboard .front-container .items-container .community .col-lg-1,
-    .springboard .front-container .items-container .whitepaper .col-lg-8,
-    .springboard .front-container .items-container .whitepaper .col-lg-1 {
-        display: none;
-    }
-
-    /* Social */
-    .springboard .social-box-container {
+@media screen and (max-width: 576px) {
+    .container-onboarding .wrap-onboarding {
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
-        margin-bottom: 32px;
+        padding: 32px 20px;
+        width: 100%;
     }
-
-    .springboard .social-box-container h3 {
-        font-size: 16px;
-    }
-
-    .springboard .social-box {
-        display: flex;
-        margin: 0;
+    .container-onboarding .alert-onboarding {
+        font-size: .65rem;
     }
 }

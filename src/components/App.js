@@ -1,9 +1,9 @@
 import React from 'react';
 import {
+	Faq,
 	Springboard
 } from './sections';
 import {
-	Background,
 	Footer
 } from './index';
 
@@ -15,10 +15,9 @@ class App extends React.Component {
 		return (
 			<main>
 				<div className={"container-fluid section-container"}>
-					<Background/>
 					<Springboard/>
-					<Springboard/>
-					<Springboard/>
+					<Faq/>
+					<Faq/>
 				</div>
 				<Footer/>
 			</main>

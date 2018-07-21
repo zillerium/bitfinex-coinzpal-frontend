@@ -1,7 +1,8 @@
 /* App-related */
 main {
     width: 100vw;
-    background: #FAFAFA;
+    background: #0B7F41; /* For browsers that do not support gradients */
+    background: linear-gradient(to right, #3b9866, #0B7F41 , #3b9866); /* Standard syntax (must be last) */
 }
 
 /* Containers */

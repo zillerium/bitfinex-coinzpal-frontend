@@ -1,70 +1,124 @@
-import React from 'react';
-
-import { Arrow, Logo, SocialBox } from 'components/modules';
+/* eslint-disable no-mixed-spaces-and-tabs,indent */
+import React  from 'react'
+import { ActionButton, FormItem } from 'components/modules'
+import update from 'immutability-helper'
 
 import 'styles/2-sections/springboard.css';
 
-import links from 'data/links';
-
 class Springboard extends React.Component {
 
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			name: "",
+			emails: {
+				from: "",
+				to: ""
+			},
+			amount: "",
+			alert: "",
+			networking: false
+		};
+
+		this.onChange = this.onChange.bind(this);
+		this.onSubmit = this.onSubmit.bind(this);
+	}
+
+	onChange(e) {
+		this.setState(update(this.state, {
+			[e.target.name]: {$set: e.target.value}
+		}))
+	}
+
+	onSubmit(e) {
+		e.preventDefault();
+
+		if (!this.checkbox.checked) {
+			this.setState(update(this.state, {
+				alert: ""
+			}));
+			return;
+		}
+
+		this.setState(update(this.state, {
+			networking: true
+		}));
+		console.log(this.state);
+	}
+
+	onClearAlert(e) {
+		e.preventDefault();
+		this.setState(update(this.state, {
+			alert: ""
+		}));
+	}
+
 	render() {
+		const { user } = this.props;
+
 		return (
-			<section className={"section springboard"}>
-				<header className={"row"}>
-					<Logo className={"col-lg-1"}/>
-
-					<div className={"spacer"}/>
-
-					<ul className={"col-lg-2 social-list"}>
-						<li><a href={"https://telegram.org"} target={"_blank"}><img
-							src={require("assets/icons/TelegramIcon.png")} alt="telegram"/></a></li>
-						<li><a href={"https://twitter.com"} target={"_blank"}><img
-							src={require("assets/icons/TwitterIcon.png")} alt="twitter"/></a></li>
-						<li><a href={links.medium} target={"_blank"}><img
-							src={require("assets/icons/MediumIcon.png")} alt="medium"/></a></li>
-					</ul>
-				</header>
-
-				<div className={"row front-container"}>
-					<div className={"col-lg-6 text-container"}>
-						<h1>Where funds flow</h1>
-						<h2>Chronos is an open protocol that facilitates continuous peer-to-peer payments</h2>
-					</div>
-
-					<div className={"col-6 col-lg-8 items-container"}>
-						<div className={"row justify-content-between community"}>
-							<a className={"col-12 col-lg-2 highlight"} href={"#"} target={"_blank"}>
-								<img src={require("assets/icons/CommunityIcon.png")} alt={"community"}/>
-								<div className={"spacer"}/>
-								<span>Community</span>
-							</a>
-							<span className={"col-lg-8"}>Join the developer community and build on Chronos</span>
-							<a className={"col-lg-1"} href={"#"} target={"_blank"}>>></a>
-						</div>
-
-						<div className={"spacer"}/>
-
-						<div className={"row justify-content-between whitepaper"}>
-							<a className={"col-12 col-lg-2 highlight"} href={links.medium} target={"_blank"}>
-								<img src={require("assets/icons/WhitepaperIcon.png")} alt={"whitepaper"}/>
-								<div className={"spacer"}/>
-								<span>Whitepaper</span>
-							</a>
-							<span className={"col-lg-8"}>Click to read through our technical whitepaper</span>
-							<a className={"col-lg-1"} href={links.medium} target={"_blank"}>>></a>
-						</div>
-					</div>
-
-					<div className={"col-8 social-box-container"}>
-						<h3>Join the conversation</h3>
-						<SocialBox />
-					</div>
+			<div className={"signup container-onboarding"}>
+				<div className={"wrap-onboarding"}>
+					<form className={"wrap-form validate-form"} onSubmit={this.onSubmit}>
+						<h1 className={"wrap-form-title"}>
+							{"Send EOS and EOS tokens"}
+						</h1>
+						<FormItem
+							key={1}
+						  	type={"text"}
+						  	name={"name"}
+						  	placeholder={"Name"}
+						  	autocomplete={"name"}
+					  		validate={"name"}
+							required={true}
+							onChange={this.onChange}
+						/>
+						<FormItem
+							key={2}
+						  	type={"email"}
+						  	name={"from-email"}
+						  	placeholder={"From Email"}
+						  	autocomplete={"email"}
+						  	validate={"email"}
+							required={true}
+						  	onChange={this.onChange}
+						/>
+						<FormItem
+							key={3}
+						  	type={"email"}
+						  	name={"to-email"}
+					  		placeholder={"To Email"}
+						  	autocomplete={""}
+						  	validate={"email"}
+							required={true}
+						  	onChange={this.onChange}
+						/>
+						<FormItem
+							key={4}
+							type={"text"}
+							name={"amoubt"}
+							placeholder={"Amount"}
+							autocomplete={""}
+							validate={"text"}
+							required={true}
+							onChange={this.onChange}
+						/>
+						<label className={"form-check-container form-item txt2"}>
+							<input name={"user-agreement"}
+								   type={"checkbox"}
+								   ref={(input) => {this.checkbox = input}}
+							/>
+							{"I agree to pay the 0.1% fee (up to a maximum of $1) for the CoinzPal service"}
+						</label>
+						<ActionButton
+							text={"Sign & Submit"}
+							loading={this.state.networking}
+					  	/>
+					</form>
 				</div>
-
-				<Arrow redirectTo={"features-title"}/>
-			</section>
-		);
+			</div>
+		)
 	}
 }
 

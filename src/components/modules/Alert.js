@@ -1,30 +1,22 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-import { alertActions } from 'actions'
-import { assets, utils } from 'tsc'
-
-class AlertContainer extends Component {
+class Alert extends Component {
 
 	static propTypes = {
-		alert: PropTypes.object,
+		message: PropTypes.string.isRequired,
 		clearAlert: PropTypes.func.isRequired
-	}
+	};
 
 	render() {
-		if (utils.isEmpty(this.props.alert) || utils.isEmpty(this.props.alert.message)) {
-			return null
-		}
-
 		return (
-			<div className={'alert alert-danger alert-dismissible text-center txt2'} role={'alert'}>
+			<div className={"alert alert-danger alert-dismissible text-center txt2"} role={"alert"}>
 				<span>{this.props.alert.message}</span>
 				<button
-					className={'close'}
-					type={'button'}
-					data-dismiss={'alert'}
-					aria-label={assets.locales.common.close}
+					className={"close"}
+					type={"button"}
+					data-dismiss={"alert"}
+					aria-label={"Close"}
 					onClick={this.props.clearAlert}>
 					<span aria-hidden={true}>&times;</span>
 				</button>
@@ -33,20 +25,4 @@ class AlertContainer extends Component {
 	}
 }
 
-const mapStateToProps = state => {
-	const { alert } = state
-	return {
-		alert
-	}
-}
-
-const mapDispatchToProps = dispatch => ({
-	clearAlert: () => {
-		dispatch(alertActions.clear())
-	}
-})
-
-export default connect(
-	mapStateToProps,
-	mapDispatchToProps
-)(AlertContainer)
+export default Alert;
