@@ -1,10 +1,8 @@
 import React from 'react';
 import {
 	Redeem,
-	Springboard
+	SignUp
 } from './sections';
-
-import Faq from 'components/sections/Springboard/Faq';
 
 import 'styles/1-layouts/app.css';
 
@@ -15,7 +13,7 @@ class App extends React.Component {
 		return (
 			<main>
 				<div className={"container-fluid section-container"}>
-					{props.location.pathname === "/" ? <Springboard/> : <Redeem/>}
+					{props.location.pathname === "/" ? <SignUp/> : <Redeem/>}
 				</div>
 			</main>
 		)

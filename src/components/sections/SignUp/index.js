@@ -4,9 +4,9 @@ import { Footer } from 'components';
 import { ActionButton, FormItem } from 'components/modules'
 import update from 'immutability-helper'
 
-import 'styles/2-sections/springboard.css';
+import 'styles/1-layouts/springboard.css';
 
-class Springboard extends React.Component {
+class SignUp extends React.Component {
 
 	constructor(props) {
 		super(props);
@@ -124,4 +124,4 @@ class Springboard extends React.Component {
 	}
 }
 
-export default Springboard;
+export default SignUp;
