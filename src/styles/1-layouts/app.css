@@ -1,0 +1,12 @@
+/* App-related */
+main {
+    width: 100vw;
+    background: #FAFAFA;
+}
+
+/* Containers */
+.card {
+    padding: 0;
+    border-radius: 12px;
+    border: 1px solid #DAE1E9;
+}

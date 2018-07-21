@@ -1,0 +1,24 @@
+
+.social-box {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+.social-box li {
+    margin: 5px 10px;
+}
+
+.social-box li a {
+    transition: all 0.4s;
+}
+
+.social-box li a:hover {
+    opacity: 0.75;
+}
+
+.social-box li img {
+    width: 24px;
+    height: 24px;
+}

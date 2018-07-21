@@ -1,0 +1,216 @@
+.springboard {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+/* Header */
+.springboard header {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    margin: 12px 0 12px 24px;
+    height: 64px;
+}
+
+.springboard header .spacer {
+    flex-grow: 1;
+}
+
+.springboard header ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.springboard header ul li {
+    margin: 0 16px;
+}
+
+.springboard header .menu-list li {
+    margin: 0 24px;
+}
+
+.springboard header ul li a {
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.4s;
+}
+
+.springboard header ul li a:hover {
+    color: #002AA1;
+}
+
+.springboard header ul li img {
+    width: 28px;
+    height: 28px;
+}
+
+
+/* Front Container */
+.springboard .front-container {
+    display: flex;
+    flex-flow: column nowrap;
+    flex-grow: 1;
+    justify-content: space-around;
+    margin: 0 8%;
+}
+
+.springboard .front-container .text-container {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
+}
+
+.springboard .front-container .text-container h1 {
+    margin: 28px 0 14px;
+    font-size: 52px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.springboard .front-container .text-container h2 {
+    margin: 5px 0 0 5px;
+    font-size: 24px;
+    line-height: 40px;
+}
+
+
+/* Items Container */
+.springboard .front-container .items-container {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-bottom: 8px;
+}
+
+.springboard .front-container .items-container img {
+    width: 20px;
+    height: 20px;
+}
+
+.springboard .front-container .items-container span {
+    padding: 0;
+}
+
+.springboard .front-container .items-container a {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.springboard .front-container .items-container div {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+
+/* Community & Whitepaper */
+.springboard .front-container .items-container div .highlight {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    box-sizing: content-box;
+    padding: 0 10px;
+    border-radius: inherit;
+    height: 100%;
+}
+
+.springboard .front-container .items-container div .highlight .spacer {
+    width: 8px;
+}
+
+.springboard .front-container .items-container div .highlight span {
+    width: 80px;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.springboard .front-container .items-container .spacer {
+    height: 12px;
+}
+
+.springboard .front-container .items-container .community {
+    border-radius: 2px;
+    margin-top: 16px;
+    height: 36px;
+    background: #EEEFFB;
+}
+
+.springboard .front-container .items-container .community .highlight {
+    background: #212B6D;
+}
+
+.springboard .front-container .items-container .whitepaper {
+    border-radius: 4px;
+    height: 36px;
+    background: #FDEEF3;
+}
+
+.springboard .front-container .items-container .whitepaper .highlight {
+    background: #E55682;
+}
+
+
+/* Social */
+.springboard .social-box-container {
+    display: none;
+}
+
+
+
+/* Mobile */
+@media screen and (max-width: 992px) {
+
+    /* Header */
+    .springboard header .spacer {
+        flex-grow: 0;
+    }
+
+    .springboard header ul {
+        display: none;
+    }
+
+    /* Front Container */
+    .springboard .front-container {
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 16px;
+    }
+
+    .springboard .front-container .text-container h1 {
+        margin: 14px 0;
+        font-size: 34px;
+        text-align: center;
+    }
+
+    .springboard .front-container .text-container h2 {
+        font-size: 14px;
+        text-align: center;
+        line-height: 22px;
+    }
+
+    .springboard .front-container .items-container .community .col-lg-8,
+    .springboard .front-container .items-container .community .col-lg-1,
+    .springboard .front-container .items-container .whitepaper .col-lg-8,
+    .springboard .front-container .items-container .whitepaper .col-lg-1 {
+        display: none;
+    }
+
+    /* Social */
+    .springboard .social-box-container {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        margin-bottom: 32px;
+    }
+
+    .springboard .social-box-container h3 {
+        font-size: 16px;
+    }
+
+    .springboard .social-box {
+        display: flex;
+        margin: 0;
+    }
+}

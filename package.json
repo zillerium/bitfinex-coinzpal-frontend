@@ -3,14 +3,43 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "bootstrap": "^4.1.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "react-scripts": "1.1.4"
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "1.1.4",
+    "sanitize.css": "^6.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "lint": "eslint ./src",
     "eject": "react-scripts eject"
+  },
+  "engines": {
+    "node": "9.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/PaulRBerg/bitfinex-cryptopal-frontend.git"
+  },
+  "keywords": [
+    "tokens",
+    "email",
+    "peer",
+    "to",
+    "peer",
+    "bitfinex"
+  ],
+  "author": "Paul Berg <hello@paulrberg.com> (https://paulrberg.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PaulRBerg/bitfinex-cryptopal-frontend/issues"
+  },
+  "homepage": "https://github.com/PaulRBerg/bitfinex-cryptopal-frontend#readme",
+  "devDependencies": {
+    "eslint": "^5.2.0"
   }
 }
